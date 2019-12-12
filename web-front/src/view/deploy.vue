@@ -118,7 +118,16 @@ export default {
           console.info(res.data);
           result = res.data
           // this.list.push({name: 'Asset'})
-          self.datalist.push({name: param,contractAddress: result.contractAddress})
+          let flag = false
+          for(let i = 0; i < self.datalist.length; ++ i) {
+            if(self.datalist[i].name == param) {
+              flag = true
+              self.datalist[i].contractAddress = result.contractAddress
+            }
+          }
+          if(flag == false){
+            self.datalist.push({name: param,contractAddress: result.contractAddress})
+          }
       });
     },
     openAdd(){
