@@ -5,13 +5,20 @@
 - 服务端：server文件夹，使用nodejs sdk实现后端
 - 前端：web-front文件夹，使用iview admin模版完成
 
-
-
 接下来
 
 - 按照 [官网教程](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/sdk/nodejs_sdk/install.html) 学习安装nodejs sdk
 
-- 进入server（我自己下载的nodejs sdk），按照官网的指导，将证书配置路径进行修改。一直到`cli.js`可以运行，官网指导就可以结束了
+- 进入server（我自己下载的nodejs sdk），**按照官网的指导，将证书配置路径进行修改**。接下来在server文件夹下执行：
+
+  ```
+  npm config set registry https://registry.npm.taobao.org	//替换为淘宝镜像，速度快
+  
+  //下载依赖
+  npm install
+  npm run repoclean
+  npm run bootstrap
+  ```
 
 - 接下来进入clis文件夹，运行指令
 
