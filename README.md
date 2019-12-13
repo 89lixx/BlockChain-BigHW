@@ -3,7 +3,18 @@
 整个项目分两个部分：
 
 - 服务端：server文件夹，使用nodejs sdk实现后端
-- 前端：web-front文件夹，使用iview admin模版完成
+
+  - 合约文件在`packages/cli/contracts`里面
+  - 后端的js APi文件在`packages/cli/app.js`
+  - **使用时请将`packages/cli/conf/config.json`文件进行配置修改**
+
+- 前端：web-front文件夹，使用iview admin模版
+
+  主要修改的文件有如下：
+
+  - `web-front/src/conf/index.js`这个文件用于调用后端API地址。
+  - `web-front/src/router/routers.js`是前端的路由部分，修改其内容可控制前端最左边bar的条目
+  - `web-front/src/view`是前端vue文件的代码，所以前端的大部分代码都在这个文件下。其中我增加了两个文件：`deal.vue，deploy.vue`用于构建前端的两个页面
 
 接下来
 
